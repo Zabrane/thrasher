@@ -12,6 +12,9 @@
 #include <errno.h>
 #include "iov.h"
 
+#if PLATFORM_DARWIN
+MSG_NOSIGNAL = 0;
+#endif
 
 void
 initialize_iov(iov_t * iovec, size_t len)

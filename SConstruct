@@ -41,6 +41,8 @@ def configure():
         env.Append(CFLAGS='-DPLATFORM_OPENBSD')
     elif 'Linux' in pl:
         env.Append(CFLAGS='-DPLATFORM_LINUX')
+    elif 'Darwin' in pl:
+        env.Append(CFLAGS='-DPLATFORM_DARWIN')
     else:
         print "Unknown platform %s" % pl
         sys.exit(1)
